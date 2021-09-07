@@ -5,7 +5,7 @@ const GoalItem = ({value,removeGoalHandler,mykey}) => {
     
     return (
         <TouchableOpacity onPress={()=>removeGoalHandler(mykey)} >
-            <View key={Math.random().toString()} style={styles.listItem}>
+            <View key={mykey} style={styles.listItem}>
                 <Text>{value}</Text>
             </View>
       </TouchableOpacity>

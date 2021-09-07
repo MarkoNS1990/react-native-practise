@@ -8,8 +8,11 @@ const GoalInput = ({addGoalHandler,changeGoal,goal,visible,cancelGoalHandler}) =
         <View style={styles.inputContainer}>
             <TextInput placeholder='Enter Course Goal' style={styles.inputField} onChangeText={changeGoal} value={goal}/>
             <View style={{flexDirection:'row'}}>
-            <Button title='Cancel' color='red' onPress={cancelGoalHandler} />                
+            <Button title='Cancel' color='red' onPress={cancelGoalHandler} />
+            <View style={{marginLeft:10}}>
             <Button title='ADD' onPress={addGoalHandler} />
+            </View>                
+            
             </View>
             
 
