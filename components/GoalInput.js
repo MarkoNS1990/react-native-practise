@@ -1,13 +1,17 @@
 import React from 'react';
 import {View, StyleSheet, TextInput, Button,Modal} from 'react-native';
 
-const GoalInput = ({addGoalHandler,changeGoal,goal,visible}) => {
+const GoalInput = ({addGoalHandler,changeGoal,goal,visible,cancelGoalHandler}) => {
 
     return (
         <Modal visible={visible} animationType='slide'> 
         <View style={styles.inputContainer}>
             <TextInput placeholder='Enter Course Goal' style={styles.inputField} onChangeText={changeGoal} value={goal}/>
+            <View style={{flexDirection:'row'}}>
+            <Button title='Cancel' color='red' onPress={cancelGoalHandler} />                
             <Button title='ADD' onPress={addGoalHandler} />
+            </View>
+            
 
       </View>
       </Modal>  

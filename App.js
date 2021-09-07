@@ -26,12 +26,16 @@ export default function App() {
     })
   }
 
+  const cancelGoalHandler = ()=>{
+    setIsAddMode(false)
+  }
+
   return (
     
     <View style={styles.screen}>
       <Button title='Add new Goal' onPress={()=>setIsAddMode(prev=>!prev)} />
-      <GoalInput visible={isAddMode} changeGoal={changeGoal} addGoalHandler={addGoalHandler} goal={goal} />
-      <GoalItems goals={goals} removeGoalHandler={removeGoalHandler}/>
+      <GoalInput setIsAddMode={setIsAddMode} visible={isAddMode} changeGoal={changeGoal} addGoalHandler={addGoalHandler} goal={goal} cancelGoalHandler={cancelGoalHandler} />
+      <GoalItems goals={goals} removeGoalHandler={removeGoalHandler}  />
     </View>
     
     
