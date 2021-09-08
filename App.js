@@ -12,10 +12,10 @@ export default function App() {
     setGoal(text)  
   }
   const addGoalHandler = ()=>{
-    setGoals(currGoals=>[...currGoals,{key:Math.random()*1000,value:goal}])
+    setGoals(currGoals=>[...currGoals,{key:(Math.random()*1000).toString(),value:goal}])
     setGoal('')
     setIsAddMode(prev=>!prev)
-    console.log('added')
+    console.log('Added new goal')
   }
 
   const removeGoalHandler =(id)=>{
